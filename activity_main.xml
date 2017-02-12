@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.androidquiz.MainActivity">
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/welcome"
+                android:text="@string/welcome"/>
+            <EditText
+                style="@style/welcome"
+                android:hint="@string/hint"
+                android:inputType="textCapWords"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/welcome"
+                android:text="@string/prog"/>
+            <TextView
+                style="@style/welcome"
+                android:id="@+id/progress"
+                android:hint="@string/result" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id = "@+id/entertainment"
+                android:layout_marginLeft="65dp"
+                style="@style/button"
+                android:src="@drawable/upleft"/>
+            <ImageView
+                android:id = "@+id/art"
+                style="@style/button"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/upright"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id = "@+id/sports"
+                android:layout_marginLeft="10dp"
+                style="@style/button"
+                android:src="@drawable/medleft"/>
+            <ImageView
+                android:id = "@+id/science"
+                android:layout_marginLeft="120dp"
+                style="@style/button"
+                android:src="@drawable/medright"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id = "@+id/history"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="3dp"
+                style="@style/button"
+                android:src="@drawable/downleft"/>
+            <ImageView
+                android:id = "@+id/geography"
+                android:layout_marginLeft="50dp"
+                style="@style/button"
+                android:src="@drawable/downright"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/entertainment"
+                android:textStyle="italic"
+                android:background="#E91E63"/>
+            <TextView
+                style="@style/question"
+                android:text="Which movies did Hitchcock film?"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/enquestion" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:id="@+id/radioge"
+                android:orientation="vertical">
+                <CheckBox android:id="@+id/ope1"
+                    style="@style/checks"
+                    android:text="@string/psycho" />
+                <CheckBox android:id="@+id/ope2"
+                    style="@style/checks"
+                    android:text="@string/birds" />
+                <CheckBox android:id="@+id/ope3"
+                    style="@style/checks"
+                    android:text="@string/metro" />
+                <CheckBox android:id="@+id/ope4"
+                    style="@style/checks"
+                    android:text="@string/stranger" />
+            </LinearLayout>
+            <Button
+                style="@style/submit"
+                android:text="@string/submit"
+                android:onClick="AnswerEntertainment"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/art"
+                android:textStyle="italic"
+                android:background="#795548"/>
+            <TextView
+                style="@style/question"
+                android:text="Who did paint this painting?"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/artquestion" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:id="@+id/radiog"
+                android:orientation="vertical">
+                <RadioButton android:id="@+id/opa1"
+                    style="@style/checks"
+                    android:text="@string/vangogh" />
+                <RadioButton android:id="@+id/opa2"
+                    style="@style/checks"
+                    android:text="@string/rembrant" />
+                <RadioButton android:id="@+id/opa3"
+                    style="@style/checks"
+                    android:text="@string/dali" />
+                <RadioButton android:id="@+id/opa4"
+                    style="@style/checks"
+                    android:text="@string/picasso" />
+            </RadioGroup>
+            <Button
+                style="@style/submit"
+                android:id="@+id/button"
+                android:text="@string/submit"
+                android:onClick="AnswerArt"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/sport"
+                android:textStyle="italic"
+                android:background="#FF5722"/>
+            <TextView
+                style="@style/question"
+                android:text="How many gold medals did Usain Bolt win in the Olympics?"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/spquestion" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    style="@style/welcome"
+                    android:text="-"
+                    android:onClick="minus"/>
+                <TextView
+                    style="@style/welcome"
+                    android:id="@+id/medals"
+                    android:text="0"
+                    android:padding="20dp"/>
+                <Button
+                    style="@style/welcome"
+                    android:text="+"
+                    android:onClick="more"/>
+            </LinearLayout>
+            <Button
+                style="@style/submit"
+                android:text="@string/submit"
+                android:onClick="AnswerSport"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/science"
+                android:textStyle="italic"
+                android:background="#4CAF50"/>
+            <TextView
+                style="@style/question"
+                android:text="Who wrote The Principia: Mathematical Principles of Natural Philosophy?"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scquestion" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <EditText
+                    style="@style/welcome"
+                    android:id="@+id/scieq"
+                    android:hint="Author"
+                    android:inputType="textCapWords"
+                    android:padding="20dp"/>
+            </LinearLayout>
+            <Button
+                style="@style/submit"
+                android:text="@string/submit"
+                android:onClick="AnswerScience"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/history"
+                android:textStyle="italic"
+                android:background="#FFEB3B"/>
+            <TextView
+                style="@style/question"
+                android:layout_gravity="center"
+                android:text="When did I World War start?"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iww" />
+            <TextView
+                style="@style/question"
+                android:id="@+id/year"
+                android:text="-"/>
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:max="10"
+                android:id="@+id/seekbar"/>
+            <Button
+                style="@style/submit"
+                android:text="@string/submit"
+                android:onClick="AnswerHistory"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="50dp"
+                style="@style/question"
+                android:text="@string/geography"
+                android:textStyle="italic"
+                android:background="#2196F3"/>
+            <TextView
+                style="@style/question"
+                android:text="Which flag is the Spanish flag?"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/it"
+                    android:id="@+id/ita"
+                    android:padding="10dp"
+                    android:background="@android:color/black"
+                    android:onClick="flag"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/spain"
+                    android:id="@+id/spa"
+                    android:padding="10dp"
+                    android:background="@android:color/black"
+                    android:onClick="flag"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/al"
+                    android:background="@android:color/black"
+                    android:id="@+id/ale"
+                    android:padding="10dp"
+                    android:onClick="flag"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gb"
+                    android:id="@+id/gbr"
+                    android:padding="10dp"
+                    android:background="@android:color/black"
+                    android:onClick="flag"/>
+            </LinearLayout>
+            <Button
+                style="@style/submit"
+                android:text="@string/submit"
+                android:onClick="AnswerGeography"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
