@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Android Trivial</string>
+    <string name="welcome">Welcome,</string>
+    <string name="hint">Name</string>
+    <string name="prog">Progress:\t</string>
+    <string name="result">0/6</string>
+    <string name="entertainment">Entertainment Question!</string>
+    <string name="art">Art and Literature Question!</string>
+    <string name="science">Science and Nature Question!</string>
+    <string name="geography">Geography Question!</string>
+    <string name="history">History Question!</string>
+    <string name="sport">Sports Question!</string>
+    <string name="vangogh">Van Gogh</string>
+    <string name="rembrant">Rembrant</string>
+    <string name="dali">Salvador Dalí</string>
+    <string name="picasso">Pablo Picasso</string>
+    <string name="wrong">Oops...Wrong Answer!</string>
+    <string name="right">Yay!...That\'s correct!</string>
+    <string name="submit">Submit!</string>
+    <string name="psycho">Psycho</string>
+    <string name="birds">The Birds</string>
+    <string name="metro">Metropolis</string>
+    <string name="stranger">Strangers on a train</string>
+    <string name="newresult">%1$d / 6</string>
+</resources>
